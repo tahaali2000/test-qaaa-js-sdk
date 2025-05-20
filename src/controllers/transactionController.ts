@@ -22,30 +22,6 @@ import { BaseController } from './baseController';
 
 export class TransactionController extends BaseController {
   /**
-   * Fetch transactions using Offset-based Pagination
-   *
-   * @param offset The number of records to skip before selecting transactions.
-   * @param limit  Number of transactions per page.
-   * @return Response from the API call
-
-
-   */
-  async fetchWithOffset(
-    offset?: number,
-    limit?: number,
-    requestOptions?: RequestOptions
-  ): Promise<ApiResponse<TransactionsOffset>> {
-    const req = this.createRequest('GET', '/transactions/offset');
-    const mapped = req.prepareArgs({
-      offset: [offset, optional(number())],
-      limit: [limit, optional(number())],
-    });
-    req.query('offset', mapped.offset);
-    req.query('limit', mapped.limit);
-    return req.callAsJson(transactionsOffsetSchema, requestOptions);
-  }
-
-  /**
    * Fetch transactions using Cursor-based Pagination
    *
    * @param cursor The unique identifier (cursor) to fetch the next set of results.
@@ -91,5 +67,29 @@ export class TransactionController extends BaseController {
     req.query('page', mapped.page);
     req.query('size', mapped.size);
     return req.callAsJson(transactionsLinkedSchema, requestOptions);
+  }
+
+  /**
+   * Fetch transactions using Offset-based Pagination
+   *
+   * @param offset The number of records to skip before selecting transactions.
+   * @param limit  Number of transactions per page.
+   * @return Response from the API call
+
+
+   */
+  async fetchWithOffset(
+    offset?: number,
+    limit?: number,
+    requestOptions?: RequestOptions
+  ): Promise<ApiResponse<TransactionsOffset>> {
+    const req = this.createRequest('GET', '/transactions/offset');
+    const mapped = req.prepareArgs({
+      offset: [offset, optional(number())],
+      limit: [limit, optional(number())],
+    });
+    req.query('offset', mapped.offset);
+    req.query('limit', mapped.limit);
+    return req.callAsJson(transactionsOffsetSchema, requestOptions);
   }
 }

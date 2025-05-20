@@ -15,24 +15,6 @@ describe('TransactionController', () => {
     controller = new TransactionController(testClient);
   });
 
-  it('should Test fetch with offset', async () => {
-    const offset = 0;
-
-    const limit = 10;
-
-    const response = await makeApiCall(
-      () => controller.fetchWithOffset(offset, limit)
-    );
-
-    expect(response.statusCode).toBe(200);
-
-    const expectedHeaders = {
-      'Content-Type': ['application/json; charset=utf-8', true],
-    };
-
-    expectHeadersToMatch(response.headers, expectedHeaders);
-  });
-
   it('should Test fetch with cursor', async () => {
     const cursor = 'txn_abc123';
 
@@ -58,6 +40,24 @@ describe('TransactionController', () => {
 
     const response = await makeApiCall(
       () => controller.fetchWithLink(page, size)
+    );
+
+    expect(response.statusCode).toBe(200);
+
+    const expectedHeaders = {
+      'Content-Type': ['application/json; charset=utf-8', true],
+    };
+
+    expectHeadersToMatch(response.headers, expectedHeaders);
+  });
+
+  it('should Test fetch with offset', async () => {
+    const offset = 0;
+
+    const limit = 10;
+
+    const response = await makeApiCall(
+      () => controller.fetchWithOffset(offset, limit)
     );
 
     expect(response.statusCode).toBe(200);

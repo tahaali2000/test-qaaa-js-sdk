@@ -10,10 +10,10 @@ API demonstrating different pagination techniques.
 Run the following command from your project directory to install the package from npm:
 
 ```bash
-npm install test-qaaa-sdk@1.2.3
+npm install test-qaaa-sdk@1.1.0
 ```
 
-For additional package details, see the [Npm page for the test-qaaa-sdk@1.2.3 npm](https://www.npmjs.com/package/test-qaaa-sdk/v/1.2.3).
+For additional package details, see the [Npm page for the test-qaaa-sdk@1.1.0 npm](https://www.npmjs.com/package/test-qaaa-sdk/v/1.1.0).
 
 ## Test the SDK
 
@@ -33,14 +33,14 @@ npm run test:coverage
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.2.3/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.1.0/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
 | timeout | `number` | Timeout for API calls.<br>*Default*: `0` |
-| httpClientOptions | [`Partial<HttpClientOptions>`](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.2.3/doc/http-client-options.md) | Stable configurable http client options. |
+| httpClientOptions | [`Partial<HttpClientOptions>`](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.1.0/doc/http-client-options.md) | Stable configurable http client options. |
 | unstableHttpClientOptions | `any` | Unstable configurable http client options. |
 
 The API client can be initialized as follows:
@@ -53,21 +53,21 @@ const client = new Client({
 
 ## List of APIs
 
-* [Transaction](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.2.3/doc/controllers/transaction.md)
+* [Transaction](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.1.0/doc/controllers/transaction.md)
 
 ## SDK Infrastructure
 
 ### Configuration
 
-* [HttpClientOptions](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.2.3/doc/http-client-options.md)
-* [RetryConfiguration](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.2.3/doc/retry-configuration.md)
+* [HttpClientOptions](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.1.0/doc/http-client-options.md)
+* [RetryConfiguration](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.1.0/doc/retry-configuration.md)
 
 ### HTTP
 
-* [HttpRequest](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.2.3/doc/http-request.md)
+* [HttpRequest](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.1.0/doc/http-request.md)
 
 ### Utilities
 
-* [ApiResponse](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.2.3/doc/api-response.md)
-* [ApiError](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.2.3/doc/api-error.md)
+* [ApiResponse](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.1.0/doc/api-response.md)
+* [ApiError](https://www.github.com/tahaali2000/test-qaaa-js-sdk/tree/1.1.0/doc/api-error.md)
 
